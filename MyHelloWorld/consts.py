@@ -1,5 +1,5 @@
 name = 'MyHelloWorld'
-version = "0.3.1-dev2"
+version = "0.3.1-dev3"
 author = 'Sathiyakugan Balakrishnan <bsathiyakugan@gmail.com>'
 homepage = 'https://github.com/sathiyakugan/MyHelloWorld'
 default_user_agent = '{}/{} (+{})'.format(name, version, homepage)
