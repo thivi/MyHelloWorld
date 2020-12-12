@@ -19,6 +19,10 @@ celerybeat-schedule
 venv/
 ENV/
 
+
+# dist
+dist/
+
 # Virtualenv
 
 .Python
@@ -27,6 +31,7 @@ pyvenv.cfg
 pip-selfcheck.json
 ### JetBrains template
 
+MANIFEST
 
 # Gradle:
 .idea/gradle.xml
