@@ -1,12 +1,12 @@
 from distutils.core import setup
-from MyHelloWorld.consts import version, homepage
+from MyHelloWorldKugan.consts import version, homepage
 
 setup(
-    name='MyHelloWorld',  # How you named your package folder (MyHelloWorld)
-    packages=['MyHelloWorld'],  # Chose the same as "name"
+    name='MyHelloWorldKugan',  # How you named your package folder (MyHelloWorldKugan)
+    packages=['MyHelloWorldKugan'],  # Chose the same as "name"
     version=version,  # Start with a small number and increase it with every change you make
     license='MIT',  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-    description='MyHelloWorld for easy hello world',  # Give a short description about your library
+    description='MyHelloWorldKugan for easy hello world',  # Give a short description about your library
     author='Sathiyakugan',  # Type in your name
     author_email='bsathiyakugan@gmail.com',  # Type in your E-Mail
     url=homepage,  # Provide either the link to your github or to your website
