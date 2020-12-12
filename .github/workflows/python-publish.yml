@@ -58,7 +58,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ steps.build-and-publish.outputs.VERSION }}
-        release_name: $VERSION Released !
+        release_name: ${{ steps.build-and-publish.outputs.VERSION }} Released !
         draft: false
         prerelease: false
 
@@ -70,7 +70,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-        asset_path: ./dist/*.tar.gz
+        asset_path: ./dist/MyHelloWorldKugan-{{VERSION}}.tar.gz
         asset_name: MyHelloWorldKugan-{{VERSION}}.tar.gz
         asset_content_type: application/tar+gzip
 
