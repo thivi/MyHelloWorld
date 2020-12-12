@@ -61,9 +61,6 @@ jobs:
         draft: false
         prerelease: false
 
-
-    - name: Commit files
-        run: |
     - name: Push changes
       uses: ad-m/github-push-action@main
       with:
