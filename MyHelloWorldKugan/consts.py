@@ -1,4 +1,4 @@
-name = 'MyHelloWorld'
+name = 'MyHelloWorldKugan'
 version = "0.6.0-dev0"
 author = 'Sathiyakugan Balakrishnan <bsathiyakugan@gmail.com>'
 homepage = 'https://github.com/sathiyakugan/MyHelloWorld'
