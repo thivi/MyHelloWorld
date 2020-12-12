@@ -21,6 +21,8 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: |
+        git config --global user.email "sathiyakugan.15@cse.mrt.ac.lk"
+        git config --global user.name "Sathiyakugan"
         python -m pip install --upgrade pip
         pip install --upgrade bump2version
         pip install wheel
@@ -58,3 +60,9 @@ jobs:
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: false
+
+    - name: Push changes
+      uses: ad-m/github-push-action@main
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
