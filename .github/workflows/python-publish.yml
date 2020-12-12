@@ -25,7 +25,6 @@ jobs:
         git config --global user.name "Sathiyakugan"
         python -m pip install --upgrade pip
         pip install --upgrade bump2version
-        pip install wheel
         pip install setuptools wheel twine
 
     - name: Build Only
@@ -45,7 +44,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       if: "contains(github.event.head_commit.message, '[Released]')"
       run: |
-        python setup.py sdist bdist_wheel
+        python setup.py sdist
         bumpversion --tag release --message '[Released] =  {current_version} → {new_version}'
         twine upload dist/*
 
