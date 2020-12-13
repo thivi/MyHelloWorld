@@ -78,6 +78,6 @@ jobs:
       uses: ad-m/github-push-action@main
       with:
         force: true
-        tags: false
+        tags: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
