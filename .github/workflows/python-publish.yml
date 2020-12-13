@@ -75,6 +75,7 @@ jobs:
         asset_content_type: application/tar+gzip
 
     - name: Push changes
+      if: "!contains(github.event.head_commit.message, '[Released]')"
       uses: ad-m/github-push-action@main
       with:
         force: true
