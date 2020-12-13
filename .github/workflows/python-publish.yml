@@ -70,13 +70,14 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-        asset_path: ./dist/MyHelloWorldKugan-{{VERSION}}.tar.gz
-        asset_name: MyHelloWorldKugan-{{VERSION}}.tar.gz
+        asset_path: ./dist/MyHelloWorldKugan-{{steps.build-and-publish.outputs.VERSION}}.tar.gz
+        asset_name: MyHelloWorldKugan-{{steps.build-and-publish.outputs.VERSION }}.tar.gz
         asset_content_type: application/tar+gzip
 
     - name: Push changes
       uses: ad-m/github-push-action@main
       with:
         force: true
+        tags: false
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
