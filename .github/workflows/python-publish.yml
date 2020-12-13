@@ -35,11 +35,6 @@ jobs:
       if: "contains(github.event.head_commit.message, '[Build]')"
       run: |
         bumpversion patch
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Add changes" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
@@ -56,11 +51,6 @@ jobs:
       if: "!contains(github.event.head_commit.message, '[Build]') && !contains(github.event.head_commit.message, '[Released]')"
       run: |
         bumpversion patch
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Add changes" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
