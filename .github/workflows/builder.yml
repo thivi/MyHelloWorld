@@ -1,7 +1,6 @@
 # This workflow builds the pushes to the master branch and bumps the version.
 
 name: Builder
-
 on:
   push:
     branches:
