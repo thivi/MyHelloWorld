@@ -37,4 +37,3 @@ jobs:
         git config --local user.name "GitHub Action"
         bumpversion patch
         git push --follow-tags
-      if: github.repository == 'Sathiyakugan/MyHelloWorld'
